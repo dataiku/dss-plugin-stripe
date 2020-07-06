@@ -1,0 +1,14 @@
+{
+    "id": "stripe",
+    "version": "0.1.0",
+    "meta": {
+        "label": "Stripe",
+        "description": "Fecth data from Stripe, a service that allow businesses to receive payments over the Internet.",
+        "author": "Dataiku (Jérémy Grèze)",
+        "icon": "icon-credit-card",
+        "tags": ["Connector"],
+        "url": "",
+        "licenseInfo": "Apache Software License version 2",
+        "supportLevel": "NOT_SUPPORTED"
+    }
+}
