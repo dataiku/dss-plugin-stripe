@@ -16,17 +16,15 @@ def iterate_dict(dictionary, parents=[]):
     """
 
     ret = []
-    for key, value in dictionary.iteritems():
+    for key, value in dictionary.items():
         if isinstance(value, dict):
             ret.extend(iterate_dict(value, parents + [key]))
-        elif isinstance(value, list):
-            ret.append((parents + [key], value))
         else:
             ret.append((parents + [key], value))
     return ret
 
 
-def unnest_json(row_obj):
+def flatten_json(row_obj):
     """
     Iterates over a JSON to tranfsorm each element into a column.
     Example:
@@ -85,7 +83,7 @@ class MyConnector(Connector):
                 if self.result_format == 'json':
                     yield { "data" : json.dumps(row) }
                 else:
-                    yield unnest_json(row)
+                    yield flatten_json(row)
             if has_more:
                 params["starting_after"] = last_id
 
