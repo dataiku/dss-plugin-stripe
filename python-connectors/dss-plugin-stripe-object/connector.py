@@ -39,7 +39,7 @@ class MyConnector(Connector):
 
     def __init__(self, config, plugin_config):
         Connector.__init__(self, config, plugin_config)
-        self.api_key = self.config.get("api_key", "")
+        self.api_key = self.config.get("api_key", {}).get("api_key", "")
         self.object = self.config.get("object")
         self.custom_object = self.config.get("custom_object")
         self.result_format = self.config.get("result_format", "readable")

@@ -11,8 +11,8 @@
         {
             "name": "api_key",
             "label": "API Key",
-            "type": "STRING",
-            "description": "You can get an API key from the Stripe Dashboard.",
+            "type": "PRESET",
+            "parameterSetId": "stripe-token",
             "mandatory": true
         },
         {
