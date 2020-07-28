@@ -18,6 +18,8 @@ def iterate_dict(dictionary, parents=[]):
     for key, value in dictionary.items():
         if isinstance(value, dict):
             ret.extend(iterate_dict(value, parents + [key]))
+        elif isinstance(value, list):
+            ret.append((parents + [key], json.dumps(value)))
         else:
             ret.append((parents + [key], value))
     return ret
