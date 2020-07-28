@@ -1,6 +1,6 @@
 {
     "meta" : {
-        "label": "Stripe",
+        "label": "Stripe data",
         "description": "Fecth data from Stripe such as Customers, Subscriptions, Invoices..."
     },
 
@@ -12,7 +12,7 @@
             "name": "api_key",
             "label": "API Key",
             "type": "STRING",
-            "description": "You can get an API key in the Stripe Dashboard.",
+            "description": "You can get an API key from the Stripe Dashboard.",
             "mandatory": true
         },
         {

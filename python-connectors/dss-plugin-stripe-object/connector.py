@@ -1,4 +1,3 @@
-
 import json
 from dataiku.connector import Connector
 import requests
@@ -95,5 +94,3 @@ class MyConnector(Connector):
 
     def get_records_count(self, partitioning=None, partition_id=None):
         raise Exception("unimplemented")
-
-
