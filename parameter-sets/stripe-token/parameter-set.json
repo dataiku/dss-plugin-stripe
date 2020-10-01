@@ -1,0 +1,21 @@
+{
+    "meta" : {
+        "label": "Stripe API key",
+        "description": "Define a preset that contains a Stripe API key",
+        "icon": "icon-credit-card"
+    },
+    "defaultDefinableInline": true,
+    "defaultDefinableAtProjectLevel": true,
+    "pluginParams": [
+    ],
+
+    "params": [
+        {
+            "name": "api_key",
+            "label": "Stripe API Key",
+            "type": "STRING",
+            "description": "You can get an API key in the Stripe Dashboard.",
+            "mandatory": true
+        }
+    ]
+}

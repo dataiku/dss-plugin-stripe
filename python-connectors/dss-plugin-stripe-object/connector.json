@@ -1,0 +1,110 @@
+{
+    "meta" : {
+        "label": "Stripe data",
+        "description": "Fecth data from Stripe such as Customers, Subscriptions, Invoices..."
+    },
+
+    "readable": true,
+    "writable": false,
+
+    "params": [
+        {
+            "name": "api_key",
+            "label": "API Key",
+            "type": "PRESET",
+            "parameterSetId": "stripe-token",
+            "mandatory": true
+        },
+        {
+            "name": "object",
+            "label": "Stripe object to retrieve",
+            "type": "SELECT",
+            "selectChoices": [
+                {
+                    "value": "v1/balance_transactions",
+                    "label": "Balance Transaction"
+                },
+                {
+                    "value": "v1/charges",
+                    "label": "Charges"
+                },
+                {
+                    "value": "v1/customers",
+                    "label": "Customers"
+                },
+                {
+                    "value": "v1/disputes",
+                    "label": "Disputes"
+                },
+                {
+                    "value": "v1/events",
+                    "label": "Events"
+                },
+                {
+                    "value": "v1/invoices",
+                    "label": "Invoices"
+                },
+                {
+                    "value": "v1/payment_intents",
+                    "label": "PaymentIntents"
+                },
+                {
+                    "value": "v1/setup_intents",
+                    "label": "SetupIntents"
+                },
+                {
+                    "value": "v1/payouts",
+                    "label": "Payouts"
+                },
+                {
+                    "value": "v1/plans",
+                    "label": "Plans"
+                },
+                {
+                    "value": "v1/products",
+                    "label": "Products"
+                },
+                {
+                    "value": "v1/prices",
+                    "label": "Prices"
+                },
+                {
+                    "value": "v1/refunds",
+                    "label": "Refunds"
+                },
+                {
+                    "value": "v1/subscriptions",
+                    "label": "Subscriptions"
+                },
+                {
+                    "value": "other",
+                    "label": "Other (please define below)"
+                }
+            ]
+        },
+        {
+            "name": "custom_object",
+            "label": "URL of the object to retrieve",
+            "description": "For example: v1/topups",
+            "type": "STRING",
+            "visibilityCondition": "model.object == 'other'"
+        },
+        {
+            "name": "result_format",
+            "label": "Choose the output format",
+            "type": "SELECT",
+            "selectChoices": [
+                {
+                    "value": "readable",
+                    "label": "Readable with columns"
+                },
+                {
+                    "value": "json",
+                    "label": "JSON"
+                }
+            ],
+            "mandatory": true,
+            "defaultValue": "readable"
+        }
+    ]
+}
