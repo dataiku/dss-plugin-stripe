@@ -13,7 +13,7 @@
         {
             "name": "api_key",
             "label": "Stripe API Key",
-            "type": "STRING",
+            "type": "PASSWORD",
             "description": "You can get an API key in the Stripe Dashboard.",
             "mandatory": true
         }
